@@ -4,7 +4,7 @@
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/Intro.png?raw=true" width="60%"/>
 </p>
 
-## Motives
+## Motivations
 ### Colour Restoration on Vintage Photos
 We live in an era where **Black and White Photos** are just products of digital effects in modern photography. Yet there are continuous work from historians, vintage art lovers, artists, film producers, or just some random nostalgic person, to recover/restore colours on old photos/films with their respective purposes. 
 
