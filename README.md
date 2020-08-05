@@ -31,7 +31,7 @@ Note that our purpose is to send in a black and white image (or grayscale image)
 Since this is just a small scale hobby project, I have narrowed the scale of the project to just **faces**. The faces dataset used are available publicly from the [Large-scale CelebFaces Attributes (CelebA) Dataset]([http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)).
 <p align="center">
 <img src="http://mmlab.ie.cuhk.edu.hk/projects/CelebA/intro.png" width="60%"/>
-!<p align="center">The dataset contains 202,599 images of faces.
+<p align="center">The dataset contains 202,599 images of faces.
 </p>
 </p>
 
