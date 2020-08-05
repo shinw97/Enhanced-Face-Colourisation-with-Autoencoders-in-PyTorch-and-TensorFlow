@@ -13,7 +13,7 @@ We live in an era where **Black and White Photos** are just products of digital 
 Yeah, this was just one of my hobby projects I wanted to try out during the COVID-19 pandemic. So... yeah.
 
 ## Autoencoders
-Image editing softwares are commonly used for the restoration. However, it requires skills and time to complete the task. As the [colourisation video editing tutorial here](https://www.youtube.com/watch?v=7SfTTDIjiM4) shows, it takes almost 18 minutes to colourise one photo for an photo editing expert. 
+Image editing softwares are commonly used for the restoration. However, it requires skills and time to complete the task. As the [photo colourisation editing tutorial here](https://www.youtube.com/watch?v=7SfTTDIjiM4) shows, it takes almost 18 minutes to colourise one photo for an photo editing expert. 
 
 Instead, autoencoders, as a common neural network architecture used to encode/decode information, might be suitable for the automation of this task. 
 
