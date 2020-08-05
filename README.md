@@ -13,9 +13,11 @@ Image editing softwares are commonly used for the restoration. However, it requi
 
 Instead, autoencoders, as a common neural network architecture used to encode/decode information, might be suitable for the automation of this task. 
 
-![autoencoders](https://upload.wikimedia.org/wikipedia/commons/2/28/Autoencoder_structure.png)
-
-Figure By Chervinskii - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=45555552
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Autoencoder_structure.png" width="60%"/>
+!<p align="center">Figure By Chervinskii - Own work, CC BY-SA 4.0, <a href="https://commons.wikimedia.org/w/index.php?curid=45555552"> https://commons.wikimedia.org/w/index.php?curid=45555552</a>
+</p>
+</p>
 
 Usual usage of autoencoders is to send in an image as input to an encoder network to output a much smaller and lighter latent space as the original image representation. The retrieval/restoration of the image is through a decoder network, where the latent space representation is passed through the decoder network (usually the inverted form of the encoder) as input, and finally retrieving the original image as the output with minimal loss.
 
