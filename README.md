@@ -1,5 +1,5 @@
 
-# Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras
+# Enhanced-Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/Intro.png?raw=true" width="60%"/>
 </p>
