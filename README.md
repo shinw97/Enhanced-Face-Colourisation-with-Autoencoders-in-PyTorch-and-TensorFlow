@@ -51,7 +51,7 @@ To summarize the implementation, besides constructing the autoencoders network w
 
 After an hour or more of training, the network merely reconstructed the basic shapes, contours and colours of the person from the grayscale image, the output was blurry and losing all sharp edges.
 
-### A Lazier (faster) way to finish the Colourisation without spending more Training Time
+## What about a Lazier (faster) way to finish the Colourisation without spending more Training Time
 Well indeed I was too lazy to wait for another few epochs of training for the network to reproduce sharp edges. Why don't we just treat the current outputs of the autoencoders as colour masks for the original grayscale images?
 
 <p align="center">
