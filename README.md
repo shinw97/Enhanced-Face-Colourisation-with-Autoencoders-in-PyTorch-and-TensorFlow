@@ -41,32 +41,33 @@ Since this is just a small-scale hobby project, I have narrowed down the scale o
 ### Training
 I have included two Google Colab Notebooks with implementations of faces colourisation autoencoders in PyTorch and Tensorflow-Keras respectively. All implementation and training details are available inside the Notebook.
 
+To summarize the implementation, besides constructing the autoencoders network with just simple VGG16 architecture, the training images (black and white photos) are produced by converting all images to grayscale images (X), while the original coloured images act as the ground truth label (y). All images are represented in RGB channels.
+
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/convert-grayscale.png?raw=true" width="60%"/>
 </p>
 
-To summarize the implementation, besides constructing the autoencoders network with just simple VGG16 architecture, the training images (black and white photos) are produced by converting all images to grayscale images (X), while the original coloured images act as the ground truth label (y). All images are represented in RGB channels.
+After an hour or more of training, the network merely reconstructed the basic shapes, contours and colours of the person from the grayscale image, the output was blurry and losing all sharp edges.
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/net-output.png?raw=true" width="25%"/>
 </p>
 
-After an hour or more of training, the network merely reconstructed the basic shapes, contours and colours of the person from the grayscale image, the output was blurry and losing all sharp edges.
-
 ## What about a Lazier (faster) way to finish the Colourisation without spending more Training Time?
 Well indeed I was too lazy to wait for another few epochs of training for the network to reproduce sharp edges. Why don't we just treat the current outputs of the autoencoders as colour masks for the original grayscale images?
+
+The outputs can be masked or blent with the original grayscale images. By doing this we could preserve the sharp edges in the mean time restoring the colours. 
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/blended.png?raw=true" width="75%"/>
 </p>
 
-The outputs can be masked or blent with the original grayscale images. By doing this we could preserve the sharp edges in the mean time restoring the colours. 
+Some image enhancement techniques can also be done later on the outputs, such as image sharpening filters and HSV management. 
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/enhanced.png?raw=true" width="75%"/>
 </p>
 
-Some image enhancement techniques can also be done later on the outputs, such as image sharpening filters and HSV management. 
 ### Sample Outputs
 Some other outputs tested:
 
