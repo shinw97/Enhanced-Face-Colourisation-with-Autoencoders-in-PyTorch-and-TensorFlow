@@ -23,9 +23,11 @@ Instead, autoencoders, as a common neural network architecture used to encode/de
 </p>
 </p>
 
-Usual usage of autoencoders is to send in an image as input to an encoder network to output a much smaller and lighter latent space as the original image representation. The retrieval/restoration of the image is through a decoder network (usually the inverted form of the encoder), where the latent space representation is passed through as input, and finally retrieving the original image as the output with minimal loss.
+The usual usage of autoencoders is to perform dimensionality reduction on vector data for lighter transmission or storage. 
 
-Note that our purpose is to send in a black and white image (or grayscale image) as input and take the colourised image as the output. Thus we just need to do some modifications on the datasets to achieve that besides  building the autoencoders network.
+An image is first sent in as input to the encoder network to get a much smaller and lighter latent space as the representation of the original image. Then, the retrieval/restoration of the image is through a decoder network (usually the inverted form of the encoder), where the latent space representation is passed through as input, and finally retrieving the original image as the output with minimal loss.
+
+Note that our purpose is to send in a black and white image (or grayscale image) as input and take the colourised image as the output. Thus, we just need to do some modifications on the datasets to achieve that besides building the autoencoders network.
 
 ### Datasets
 Since this is just a small-scale hobby project, I have narrowed down the scale of the project to just **faces**. The faces dataset used are available publicly from the [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
