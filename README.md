@@ -56,7 +56,7 @@ After an hour or more of training, the network merely reconstructed the basic sh
 ## What about a Lazier (faster) way to finish the Colourisation without spending more Training Time?
 Well indeed I was too lazy to wait for another few epochs of training for the network to reproduce sharp edges. Why don't we just treat the current outputs of the autoencoders as colour masks for the original grayscale images?
 
-The outputs can be masked or blent with the original grayscale images. By doing this we could preserve the sharp edges in the mean time restoring the colours. 
+The outputs can be masked or blent with the original grayscale images. By doing this we can preserve the sharp edges in the mean time restore the colours. 
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/blended.png?raw=true" width="75%"/>
