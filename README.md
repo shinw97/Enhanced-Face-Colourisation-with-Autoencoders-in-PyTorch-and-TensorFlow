@@ -5,17 +5,16 @@
 </p>
 
 ## Motivations
-### Colour Restoration on Vintage Photos
-We live in an era where **Black and White Photos** are just products of digital effects in modern photography. Yet there are continuous work from historians, vintage art lovers, artists, film producers, or just some random nostalgic person, to recover/restore colours on old photos/films with their respective purposes. 
-
+### Automated Colour Restoration on Vintage Photos
+We live in an era where **Black and White Photos** are just the products of digital effects in the modern photography. Yet there are a lot of continuous effort from the historians, vintage art lovers, artists, film producers, or just some random nostalgic person, to try to recover/restore the colours on the old photos/films. 
 
 ### Because I have too much time
-Yeah, this was just one of my hobby projects I wanted to try out during the COVID-19 pandemic. So... yeah.
+Yeah, this was one of my hobby projects I wanted to try out during the COVID-19 pandemic. So... yeah.
 
 ## Autoencoders
-Image editing softwares are commonly used for the restoration. However, it requires skills and time to complete the task. As the [photo colourisation editing tutorial here](https://www.youtube.com/watch?v=7SfTTDIjiM4) shows, it takes almost 17 minutes to colourise one photo for a photo editing expert. 
+Image editing softwares are commonly used for the image restoration task. However, it requires skills and time to complete the task. It can take minutes to colourise one photo for a photo editing expert. 
 
-Instead, autoencoders, as a common neural network architecture used to encode/decode information, might be suitable to automate this task. 
+Instead, autoencoders, as a common neural network architecture usually used to encode/decode image information, might be suitable to automate this task. 
 
 <p align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Autoencoder_structure.png" width="60%"/>
@@ -23,9 +22,9 @@ Instead, autoencoders, as a common neural network architecture used to encode/de
 </p>
 </p>
 
-The usual usage of autoencoders is to perform dimensionality reduction on vector data for lighter transmission or storage. 
+The usual usage of the autoencoders is to perform dimensionality reduction on the vector data for lighter transmission or storage. 
 
-An image is first sent in as input to the encoder network to get a much smaller and lighter latent space as the representation of the original image. Then, the retrieval/restoration of the image is through a decoder network (usually the inverted form of the encoder), where the latent space representation is passed through as input, and finally retrieving the original image as the output with minimal loss.
+An image is first sent in as input to the encoder network to get a much smaller and lighter latent space as the representation of the original image. Then, the retrieval/restoration of the image is through a decoder network (usually the inverted form of the encoder), where the latent space representation is passed through as the input, and finally retrieving the original image as the output with minimal loss.
 
 Note that our purpose is to send in a black and white image (or grayscale image) as input and take the colourised image as the output. Thus, we just need to do some modifications on the datasets to achieve that besides building the autoencoders network.
 
@@ -39,9 +38,9 @@ Since this is just a small-scale hobby project, I have narrowed down the scale o
 
 
 ### Training
-I have included two Google Colab Notebooks with implementations of faces colourisation autoencoders in PyTorch and Tensorflow-Keras respectively. All implementation and training details are available inside the Notebook.
+I have included two Google Colab Notebooks with the implementations of the face colourisation autoencoders in PyTorch and Tensorflow-Keras respectively. All implementation and training details are available inside the Notebook.
 
-To summarize the implementation, besides constructing the autoencoders network with just simple VGG16 architecture, the training images (black and white photos) are produced by converting all images to grayscale images (X), while the original coloured images act as the ground truth label (y). All images are represented in RGB channels.
+To summarize the implementation, besides constructing the autoencoders network with just a simple VGG16 architecture, the training images (black and white photos) are produced by converting all the images to grayscale images (X), while the original coloured images act as the ground truth label (y). All images are represented in RGB channels.
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/convert-grayscale.png?raw=true" width="60%"/>
@@ -54,7 +53,7 @@ After an hour or more of training, the network merely reconstructed the basic sh
 </p>
 
 ## What about a Lazier (faster) way to finish the Colourisation without spending more Training Time?
-Well indeed I was too lazy to wait for another few epochs of training for the network to reproduce sharp edges. Why don't we just treat the current outputs of the autoencoders as colour masks for the original grayscale images?
+Well indeed I was too lazy to wait for another few epochs of training for the network to reproduce sharp edges. Why don't we just treat the current outputs of the autoencoders as the colour masks for the original grayscale images?
 
 The outputs can be masked or blent with the original grayscale images. By doing this we can preserve the sharp edges in the mean time restore the colours. 
 
@@ -62,7 +61,7 @@ The outputs can be masked or blent with the original grayscale images. By doing 
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/blended.png?raw=true" width="75%"/>
 </p>
 
-Some image enhancement techniques can also be done later on the outputs, such as image sharpening filters and HSV management. 
+Some image enhancement techniques can also be done later on the outputs, such as the image sharpening filters and HSV management. 
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/enhanced.png?raw=true" width="75%"/>
@@ -88,7 +87,7 @@ Some other outputs tested:
 </p>
 
 ### Tests on Real Black and White Photos
-Well, and this is how the network performed on real black and white photos:
+And this is how the network performed on real black and white photos:
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/sample-outputs/real-case-sample-1.png?raw=true" width="100%"/>
@@ -110,7 +109,7 @@ Well, and this is how the network performed on real black and white photos:
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/sample-outputs/real-case-sample-5.png?raw=true" width="100%"/>
 </p>
 
-## References for the Images used outside of the Dataset
+## References for the Images used besides of the Dataset
 
  1. [https://www.flickr.com/photos/29185076@N05/4591829922/](https://www.flickr.com/photos/29185076@N05/4591829922/)
  2. [https://commons.wikimedia.org/wiki/File:Jfk2.jpg](https://commons.wikimedia.org/wiki/File:Jfk2.jpg)
