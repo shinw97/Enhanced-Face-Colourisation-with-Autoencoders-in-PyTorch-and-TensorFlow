@@ -46,7 +46,7 @@ To summarize the implementation, besides constructing the autoencoders network w
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/convert-grayscale.png?raw=true" width="60%"/>
 </p>
 
-After an hour or more of training, the network merely reconstructed the basic shapes, contours and colours of the person from the grayscale image, the output was blurry and losing all sharp edges.
+After an hour or more of training, the network merely reconstructed the basic shapes, contours and colours of the person from the grayscale image, the output was blurry and losing all the sharp edges.
 
 <p align="center">
 <img src="https://github.com/shinw97/Faces-Colourisation-using-Autoencoders-in-PyTorch-and-TensorFlow-Keras/blob/master/assets/net-output.png?raw=true" width="25%"/>
